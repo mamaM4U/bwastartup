@@ -2,9 +2,9 @@ package campaign
 
 import "gorm.io/gorm"
 
-type Repostiroy interface {
+type Repository interface {
 	FindAll() ([]Campaign, error)
-	FindByUserId() ([]Campaign, error)
+	FindByUserID(userID int) ([]Campaign, error)
 }
 
 type repository struct {
